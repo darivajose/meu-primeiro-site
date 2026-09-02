@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Primeiro Site Java</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #f4f4f9; color: #333;">
+
+<h1>Olá, Mundo! 🌐</h1>
+
+<!-- Exibe a mensagem dinâmica do Java -->
+<p th:text="${mensagem}" style="font-size: 1.2em; color: #007bff; font-weight: bold;"></p>
+
+<!-- Nosso novo formulário que envia dados via POST para a rota /saudar -->
+<form th:action="@{/saudar}" method="post" style="margin-top: 30px;">
+    <input type="text" name="nomeUsuario" placeholder="Digite seu nome aqui" required
+           style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 250px;">
+
+    <button type="submit"
+            style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Enviar para o Java
+    </button>
+</form>
+
+</body>
+</html>
+
