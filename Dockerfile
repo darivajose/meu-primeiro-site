@@ -2,7 +2,7 @@
 FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /app
 COPY . .
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+RUN ./mvnw package -Dmaven.test.skip=true
 
 # Estágio de Execução
 FROM eclipse-temurin:17-jre-alpine
